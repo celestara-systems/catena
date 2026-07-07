@@ -287,6 +287,15 @@ function resize(){
 resize();
 addEventListener('resize',resize);
 
+let targetYaw = 0;
+let targetPitch = 0;
+let currentYaw = 0;
+let currentPitch = 0;
+
+let yaw = 0;
+let pitch = 0;
+let radius = 45;
+
 function animate(){
  requestAnimationFrame(animate);
  cloud.rotation.y+=0.0008;
@@ -315,17 +324,6 @@ edgePulse.material.opacity=0.05+(pulse*0.06);
  renderer.render(scene,camera);
 }
 animate();
-
-
-
-let targetYaw=0;
-let targetPitch=0;
-let currentYaw=0;
-let currentPitch=0;
-
-let yaw=0;
-let pitch=0;
-let radius=45;
 
 
 document.addEventListener('mousemove',e=>{
